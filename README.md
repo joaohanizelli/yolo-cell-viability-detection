@@ -1,4 +1,4 @@
-# 🔬 YOLOv8 Cell Viability Detection
+# YOLOv8 Cell Viability Detection
 
 ![Python](https://img.shields.io/badge/python-v3.11+-blue.svg)
 ![PyTorch](https://img.shields.io/badge/PyTorch-v2.6+-red.svg)
@@ -7,14 +7,14 @@
 
 Automated detection and classification of *Saccharomyces cerevisiae* cells with/without methylene blue staining using YOLOv8 deep learning.
 
-## 🎯 Key Results
+## Key Results
 
 - **Performance**: 94.4% mAP@0.5 (validation), 88.7% F1-Score (test)
 - **Methodology**: Systematic framework with 5 optimization strategies
 - **Key Finding**: Minimal augmentation proved more effective for microscopy
 - **Reproducibility**: Complete code with deterministic controls
 
-## 🔬 About This Project
+## About This Project
 
 **Bachelor's Thesis (TCC)** - Electronic Engineering, UFSC 2025
 
@@ -22,14 +22,14 @@ Automated detection and classification of *Saccharomyces cerevisiae* cells with/
 
 **Context**: Specific application for *S. cerevisiae* + methylene blue in brightfield microscopy.
 
-## 🛠️ Technologies
+## Technologies
 
 - **Deep Learning**: YOLOv8 (Ultralytics)
 - **Framework**: PyTorch, Python 3.11
 - **Environment**: Kaggle (Tesla P100)
 - **Dataset**: 329 images, 4,930 cellular annotations
 
-## 📊 Dataset Overview
+## Dataset Overview
 
 - **Total**: 329 microscopic images (640×640px)
 - **Classes**: COM_corante (dead cells) vs SEM_corante (viable cells)
@@ -37,7 +37,7 @@ Automated detection and classification of *Saccharomyces cerevisiae* cells with/
 - **Format**: COCO → YOLO conversion
 - **Balance**: 46.2% vs 53.8% (adequate)
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 ```bash
@@ -62,30 +62,30 @@ Execute `notebook_completo.ipynb` sequentially:
 | Fine-tuning | 93.1% | Reduced LR + regularization |
 | High Class Weight | 93.8% | Class balancing |
 | High Regularization | 93.9% | Dropout + weight decay |
-| **Minimal Augmentation** | **94.4%** ⭐ | **Reduced transformations** |
+| **Minimal Augmentation** | **94.4%** | **Reduced transformations** |
 
-## 🔍 Key Discoveries
+## Key Discoveries
 
-### 💡 Minimal Augmentation Insight
+### Minimal Augmentation Insight
 Reduced data augmentation outperformed conventional extensive transformations for microscopy, possibly due to preservation of specific morphological characteristics.
 
-### 🛡️ Anti-Leakage Methodology
+### Anti-Leakage Methodology
 Rigorous data leakage prevention protocol:
 - Chronological splits respected
 - Test set isolated during development
 - Deterministic seeds controlled
 
-### 🎯 Threshold Optimization
+### Threshold Optimization
 F1-Score based methodology (threshold=0.55) outperformed arbitrary values.
 
-## ⚠️ Limitations
+## Limitations
 
 - **Specific scope**: Only *S. cerevisiae* + methylene blue
 - **Small dataset**: 32-image test set (high variance)
 - **Single modality**: Brightfield microscopy only
 - **Academic context**: Limited undergraduate resources
 
-## 🔮 Future Work
+## Future Work
 
 - Validation on larger datasets (>1000 images)
 - Extension to other cell species
@@ -93,7 +93,7 @@ F1-Score based methodology (threshold=0.55) outperformed arbitrary values.
 - Laboratory GUI interface
 - Comparison with other architectures
 
-## 📚 Citation
+## Citation
 
 ```bibtex
 @misc{tcc2025celldetection,
@@ -105,15 +105,15 @@ F1-Score based methodology (threshold=0.55) outperformed arbitrary values.
 }
 ```
 
-## 📄 Complete Documentation
+## Complete Documentation
 
 Full thesis (Portuguese): [Link will be available after defense]
 
-## 🤝 Contributing
+## Contributing
 
 This is an academic project, but suggestions and extensions are welcome!
 
-## 📜 License
+## License
 
 MIT License - Feel free to use for academic research.
 

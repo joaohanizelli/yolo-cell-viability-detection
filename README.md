@@ -97,7 +97,7 @@ F1-Score based methodology (threshold=0.55) outperformed arbitrary values.
 
 ```bibtex
 @misc{tcc2025celldetection,
-  title={Automated Detection and Classification of S. cerevisiae Cells using YOLOv8},
+  title={Sistema Automatizado para Detecção e Classificação de Viabilidade Celular em Saccharomyces cerevisiae Utilizando YOLOv8},
   author={[João Henrique Anizelli Godoi]},
   year={2025},
   school={Universidade Federal de Santa Catarina},

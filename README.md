@@ -54,7 +54,7 @@ Execute `notebook_completo.ipynb` sequentially:
 5. **Block 5**: Threshold optimization
 6. **Block 6**: Final validation and results
 
-## 📈 Optimization Strategies Tested
+## Optimization Strategies Tested
 
 | Strategy | mAP@0.5 | Description |
 |----------|---------|-------------|

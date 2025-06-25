@@ -44,27 +44,81 @@ Automated detection and classification of *Saccharomyces cerevisiae* cells with/
 pip install -r requirements.txt
 ```
 
-### Run the Complete Notebook
-Execute `notebook_completo.ipynb` sequentially:
+### Complete Implementation Structure
+Execute `tcc_yolo_cell_detection.ipynb` sequentially - **11 comprehensive blocks:**
 
-1. **Block 1**: Dataset loading and analysis
-2. **Block 2**: Data preparation (COCO→YOLO)
-3. **Block 3**: YOLOv8 baseline
-4. **Block 4**: 5 optimization strategies
-5. **Block 5**: Threshold optimization
-6. **Block 6**: Final validation and results
+**Setup & Foundation:**
+- **Setup**: Environment configuration and library imports
+- **Block 1**: COCO dataset loading and exploratory analysis  
+- **Block 2**: Data preparation (COCO→YOLO conversion + quality filters)
+
+**Core Training & Evaluation:**
+- **Block 3**: YOLOv8 baseline training and validation
+- **Block 4**: YOLO detection visualization and analysis
+
+**Advanced Optimization:**
+- **Block 5**: Systematic optimization (5 strategies: baseline, fine-tuning, class weight, regularization, minimal augmentation)
+- **Block 6**: Individual threshold optimization for all 5 trained models
+- **Block 7**: Final results consolidation and tabular analysis
+
+**Comprehensive Testing:**
+- **Block 8**: Microscopic cell detection metrics analysis  
+- **Block 9**: Robustness testing - Inference validation
+- **Block 10**: Robustness testing - Multi-seed training validation
+
+**Production System:**
+- **Block 11**: Unified analysis system (automatic single image or batch processing)
+
+### Key Features
+- **Automated path detection** - Works with Kaggle or custom environments
+- **Anti-leakage protocol** - Rigorous data splitting methodology  
+- **Universal inference** - Single function handles images or folders
+- **Deterministic training** - Reproducible results with seed control
+- **Scientific metrics** - IoU, mAP@0.5, precision, recall, F1-Score
 
 ## Optimization Strategies Tested
 
-| Strategy | mAP@0.5 | Description |
-|----------|---------|-------------|
-| Baseline | 90.8% | Standard YOLOv8s |
-| Fine-tuning | 93.1% | Reduced LR + regularization |
-| High Class Weight | 93.8% | Class balancing |
-| High Regularization | 93.9% | Dropout + weight decay |
-| **Minimal Augmentation** | **94.4%** | **Reduced transformations** |
+The notebook implements 5 systematic optimization strategies:
 
-## Key Discoveries
+| Strategy | Description | Key Features |
+|----------|-------------|--------------|
+| **Baseline** | Standard YOLOv8s | Reference model (90.8% mAP@0.5) |
+| **Advanced Fine-tuning** | Reduced LR + regularization | Learning rate optimization |
+| **High Class Weight** | Balanced class weighting | Focus on minority class |
+| **High Regularization** | Dropout + weight decay | Overfitting prevention |
+| **Minimal Augmentation** | Reduced transformations | **94.4% mAP@0.5** |
+
+## Notebook Architecture
+
+### Block-by-Block Structure
+```
+Setup Block: Environment + Dependencies    → Complete setup and imports
+Block 1: Dataset Analysis                  → COCO loading + statistics  
+Block 2: Data Preparation                  → COCO→YOLO + quality filters
+Block 3: Baseline Training                 → YOLOv8s standard training
+Block 4: Visualization                     → Results analysis + plots  
+Block 5: Optimization                      → 5 systematic strategies
+Block 6: Threshold Tuning                  → Individual model optimization
+Block 7: Results Consolidation             → Final tabular analysis
+Block 8: Metrics Analysis                  → Microscopy-specific metrics
+Block 9: Inference Testing                 → Robustness validation
+Block 10: Multi-seed Testing               → Training stability analysis
+Block 11: Production System                → Universal inference API
+```
+
+### Universal Inference System
+```python
+# Single image analysis
+results = universal_analysis('path/to/image.jpg')
+
+# Batch processing  
+results = universal_analysis('path/to/folder/', conf_threshold=0.55)
+
+# Custom parameters
+results = universal_analysis('path/', conf_threshold=0.6, max_visualize=10)
+```
+
+##  Key Discoveries
 
 ### Minimal Augmentation Insight
 Reduced data augmentation outperformed conventional extensive transformations for microscopy, possibly due to preservation of specific morphological characteristics.
@@ -101,6 +155,7 @@ F1-Score based methodology (threshold=0.55) outperformed arbitrary values.
   author={[João Henrique Anizelli Godoi]},
   year={2025},
   school={Universidade Federal de Santa Catarina},
+  type={Trabalho de Conclusão de Curso},
   url={https://github.com/joaohanizelli/yolo-cell-viability-detection}
 }
 ```

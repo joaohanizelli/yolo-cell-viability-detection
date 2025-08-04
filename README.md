@@ -162,7 +162,7 @@ F1-Score based methodology (threshold=0.55) outperformed arbitrary values.
 
 ## Complete Documentation
 
-Full thesis (Portuguese): [Link will be available after defense]
+Full thesis (Portuguese): https://repositorio.ufsc.br/handle/123456789/266740
 
 ## Contributing
 
